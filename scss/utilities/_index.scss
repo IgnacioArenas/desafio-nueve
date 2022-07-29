@@ -1,0 +1,79 @@
+*{
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr 2fr 0.5 fr;
+    grid-template-areas: "header header header header"
+                         "section section section section"
+                         "main main main main"
+                         "footer footer footer footer ";
+}
+
+header{
+    display: flex;
+    grid-area: header;
+    justify-content: space-around;
+    align-items: center;
+    background-color:silver;
+}
+
+header nav ul{
+    list-style: none;
+    gap: 2rem;
+    display: flex;
+    font-size:x-large;
+}
+
+header nav ul li:hover{
+    background-color: aqua;
+}
+
+a:link{
+    color: darkred;
+    text-decoration: none;
+}
+
+a:visited{
+    color: darkred;
+}
+
+.Featured{
+    grid-area: section;
+    background-color: darkcyan;
+    display: flex;
+    justify-content: center;
+}
+
+section img{
+    zoom: 20%;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    align-items: center;
+}
+
+main div img:hover{
+    size: 10%;
+}
+main div img{
+    padding: 18px;
+
+}
+
+footer{
+    grid-area: footer;
+    background-color: darkgoldenrod;
+}
+
+footer h2{
+    text-align: center;
+}
